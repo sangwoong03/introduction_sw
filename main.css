@@ -137,6 +137,9 @@ main .inner li .detail {
 
 main .inner .section--portfolio li {
 }
+main .inner .section--portfolio li img {
+    margin-right: 12px;
+}
 
 /* FOOTER */
 footer {
@@ -145,6 +148,51 @@ footer {
 footer .inner {
     display: flex;
 }
+footer .inner h2 {
+    margin-top: 0;
+}
 footer .inner div {
     flex: 1;
 }
+
+footer .inner .skill-eng {
+}
+
+.skill {
+    width: 90%;
+    border: none;
+}
+.skill.skill-eng {
+    margin-bottom: 30px;
+}
+  .bar {
+    width: 100%;
+    background: lightgray;
+    border-radius: 14px;
+    text-align: right;
+  }
+  .bar-percent {
+    background: black;
+    border-radius: 14px;
+    color: #fff;
+    text-align: center;
+  }
+  .eng {
+    width: 80%;
+  }
+  .ms {
+      width: 65%;
+  }
+
+.stacks .skill{
+    margin-bottom: 15px;
+}
+  .js {
+      width: 40%;
+  }
+  .react {
+      width: 35%;
+  }
+  .py {
+      width: 20%;
+  }
