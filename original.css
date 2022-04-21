@@ -1,0 +1,198 @@
+/* COMMON */
+.body__container {
+    width: 860px;
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+    color: #000;
+    font-size: 18px;
+}
+ul {
+    list-style: none;
+}
+.vl {
+    border-left: 2px solid rgb(255, 221, 221);
+    height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+h2 {
+    color: palevioletred;
+}
+
+
+/* SECTION */
+.section {
+    width: 100%;
+}
+.section .inner {
+    padding: 10px 80px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* HEADER */
+header .inner {
+    display: flex;
+    box-sizing: border-box;
+}
+header .box--info {
+    display: flex;
+    width: 750px;    
+    border-bottom: 1px solid #e5e5e5;
+}
+header .box--info .profile-image {
+    padding-top: 10px;
+    margin-right: 10px;
+}
+header .box--info .profile-detail {
+    border-left: 1px solid #e5e5e5;
+}
+header .box--info .profile-detail h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 38px;
+    text-align: center;
+}
+header .box--info .job {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+header .box--info .etc {
+    font-size: 12px;
+    text-align: center;
+}
+header .box--contract {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+header .about {
+    width: 100%;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 10px;
+}
+header .about .about-title {
+    color: palevioletred;
+    margin-bottom: 5px;
+}
+header .about .about-description{
+    margin-top: 5px;
+    background: #f2f2f2;
+    height: 
+}
+
+/* MAIN */
+
+main .inner{
+}
+main .inner section {
+    margin-bottom: 40px;
+}
+main .inner section li {
+    margin-bottom: 10px;
+}
+main .section--edu{
+
+}
+main .section--edu .edu-image {
+    width: 14px;
+    height: 14px;
+}
+
+
+main li {
+    display: flex;
+    margin-left: 5px;
+}
+main .inner li .date {
+    width: 30%;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+main .inner li .where {
+    width: 40%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: bold;
+}
+main .section--edu li .edu1,
+main .inner .section--experience li:nth-child(2) .where {
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+main .inner li .detail {
+    font-size: 14px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .inner .section--portfolio li {
+}
+main .inner .section--portfolio li img {
+    margin-right: 12px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f2f2f2;
+}
+footer .inner {
+    display: flex;
+}
+footer .inner h2 {
+    margin-top: 0;
+}
+footer .inner div {
+    flex: 1;
+}
+
+footer .inner .skill-eng {
+}
+
+.skill {
+    width: 90%;
+    border: none;
+}
+.skill.skill-eng {
+    margin-bottom: 30px;
+}
+  .bar {
+    width: 100%;
+    background: lightgray;
+    border-radius: 14px;
+    text-align: right;
+  }
+  .bar-percent {
+    background: black;
+    border-radius: 14px;
+    color: #fff;
+    text-align: center;
+  }
+  .eng {
+    width: 80%;
+  }
+  .ms {
+      width: 65%;
+  }
+
+.stacks .skill{
+    margin-bottom: 15px;
+}
+  .js {
+      width: 40%;
+  }
+  .react {
+      width: 35%;
+  }
+  .py {
+      width: 20%;
+  }
