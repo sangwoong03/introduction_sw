@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -9,17 +10,44 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./src/mode.js" defer></script>
+  <script src="./src/color.js" defer></script>
 </head>
 
 <body>
   <div class="container">
+    <div class="controller">
+      <div class="theme-color">
+        <h2>색상 이미지</h2>
+        <div id="jsColors" class="control__colors">
+          <div class="controls__color" style="background: #2c2c2c"></div>
+          <div class="controls__color" style="background: #ffffff"></div>
+          <div class="controls__color" style="background: #ff3b30"></div>
+          <div class="controls__color" style="background: #ff9500"></div>
+          <div class="controls__color" style="background: #ffcc00"></div>
+          <div class="controls__color" style="background: #4cd963"></div>
+          <div class="controls__color" style="background: #5ac8fa"></div>
+          <div class="controls__color" style="background: #0579ff"></div>
+          <div class="controls__color" style="background: #5856d6"></div>
+        </div>
+      </div>
+      <div class="mode-changer">
+        
+        <label for="dark-mode-changer" class="changer__switch">
+          <input id="dark-mode-changer" type="checkbox">
+          <span class="slider round"></span>
+        </label>  
+      </div>
+    </div>
+
     <div class="side--section">
       <div class="profile--box">
         <h2 class="profile__name">
           김 상 웅🐣
         </h2>
         <p class="profile__description">
-          📌 화장실MAP 만들기 
+          📌 96. 12. 06 (경기 오산)
         </p>
         <p class="profile__description">
           📌 FE (JS, React) 
@@ -31,20 +59,27 @@
       <nav class="nav--box">
         <ul>
           <li> <a href="#about"> 🖇️ About Me </a> </li>
-          <li> <a href="#education"> 🖇️ Education</a> </li>
+          <li> <a href="#catching"> 🖇️ Catch up Me!</a> </li>
           <li> <a href="#experience"> 🖇️ Experiences </a> </li>
           <li> <a href="#skills"> 🖇️ Skills </a> </li>
           <li> <a href="#contact"> 🖇️ Contact </a> </li>
         </ul>
       </nav>
     </div>
+
     <section class="main--section">
       
       <div id="about" class="section about--me">
         <div class="about__wrapper">
           <h2 class="main--title title__about"> About Me </h2>
           <p>
-            내용 내용 내용
+            길에서 화장실에 급하게 가고 싶을 때마다, <br/>
+            건물 화장실은 닫혀있고 공중화장실은 너무 더러워서! <br>
+            화장실 지도를 만들고 싶었던 20대 초반이 기억납니다. <br>
+            영어영문학을 전공하고, 작년까지는 장교로 복무하면서  <br>
+            저에게는 프로그래밍을 접할 기회가 적었습니다.  <br>
+            
+            20대 초반 저의 꿈을 이루고자 WECODE에 지원했습니다.<br>
           </p>
         </div>
         <div class="img__wrapper">  
@@ -52,23 +87,35 @@
         </div>
       </div>
       
-      <div id="education" class="section education">
-        <h2 class="main--title title__edu"> Education </h2>
+      <div id="catching" class="section catching">
+        <h2 class="main--title title__catching"> Recently.. </h2>
       </div>
       
       <div id="experience" class="section experiences">
         <h2 class="main--title title__ex"> Experience </h2>
+        <div class="experiences__wrapper">
+          
+        </div>
       </div>
       
       <div id="skills" class="section skills">
-        <h2 class="main--title title__skills"> Skills </h2>      </div>
+        <h2 class="main--title title__skills"> Skills </h2>
+        <div class="skills_wrapper">
+
+        </div>
+      </div>
       
         <div id="contact" class="section contact">
         <h2 class="main--title title__contact"> Contact </h2>
+        <ul>
+          <li> Github </li>
+          <li> Email </li>
+        </ul>
       </div>
     </section>
 
   </div>
+
 </body>
 
 </html>
