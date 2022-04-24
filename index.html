@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -10,102 +9,110 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="./src/mode.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="./src/color.js" defer></script>
+  <script src="./src/mode.js" defer></script>
 </head>
 
 <body>
   <div class="container">
     <div class="controller">
       <div class="theme-color">
-        <h2>색상 이미지</h2>
-        <div id="jsColors" class="control__colors">
-          <div class="controls__color" style="background: #2c2c2c"></div>
-          <div class="controls__color" style="background: #ffffff"></div>
-          <div class="controls__color" style="background: #ff3b30"></div>
-          <div class="controls__color" style="background: #ff9500"></div>
-          <div class="controls__color" style="background: #ffcc00"></div>
-          <div class="controls__color" style="background: #4cd963"></div>
-          <div class="controls__color" style="background: #5ac8fa"></div>
-          <div class="controls__color" style="background: #0579ff"></div>
-          <div class="controls__color" style="background: #5856d6"></div>
+        <button class="color-btn">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAABRUlEQVQ4jZWVsUoDQRCGv8TIBbG51kosTFSwyQsICZJDzncSK4ONT2EnGAsLtbJREAVrH+EUBLGLZ7FzMDfu7nk/LOzOzvz3z+7sXIdmpMCGzN+Az3/ERHEGlDJOmpy7HlsGJGq9rea7ap4A06YPHIuSFyHaB96VwgIYA1vAs9iOQmQTFVgCP2Yd2xv7CHvAQ4QkNJ6A5ZDKYYMyOxbApiawl7IOdIztEsiBQ+DK7HWBNasqxZXGLfULKIXMYm58CuBGOFKAUSSlAw9hHvEf+erQpmRhj6SGJeBbAr9E8oraXwXOTcwp9YsogHvgAs8RTfmbxhyXZo67FLu/F1O8Q/uyGYbIEtyTa1vYr0DfR5gZx5jShVlnIZVVc3gEBrjm8KECq+YwEJ9SYqKY4N51hTtFeK3sPfFtDd1gZ03O0SIVtPoF/AKU056Y2QBMZgAAAABJRU5ErkJggg==" />
+        </button>
+        <div id="jsColors" class="control__colors visible">
         </div>
       </div>
       <div class="mode-changer">
-        
         <label for="dark-mode-changer" class="changer__switch">
           <input id="dark-mode-changer" type="checkbox">
-          <span class="slider round"></span>
-        </label>  
+          <span class="slider round">
+            <img 
+              class="sun-image visible"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA8klEQVQ4jcXUsU8CMRQG8B/iatyJ6HAQzslVZxNl8C9VZHNz1oTF1UU3RxZmDQ6UcDZX6F2MfslLL+33vnev/Vr+CSc4ziHuZQpeY9xWMLcI7O9K7uAJZTT/FqKKEs/o7qpa4gXFFk4ROHHhJAY4RR8TLEJMMQprg1yxNfqYYxnFHEdNxYQ/i8XWcZtK6oSxwGX4fsejVYsHibwFDnGDXph7wEcTi1SxbJM0lW550kZwJH0ow1RSquUhPnGGOxvb3OPcau+zbfOrxu5iVkMc46qm8Ex09eLL/YWLMFZR93S91nHr9jAW24Ym3B/o2Rj4b/ENf208xVmVUpUAAAAASUVORK5CYII="/>
+            <img
+            class="moon-image" 
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA0klEQVQ4jdXTwUpCQRQG4M/CS9toGyJtjVq4kF6kN8gXaSsSJfQYLlqI4MJ3ULFNL1HQKp0WI2jhvXJHNx4YmNl8/OdwhmOuGzQPAZ3hFT+oHwIbI+B9X4yYLKzOcF/sFosNcJCCnGzc2//eteRoq5pbpwtY4rIsUpSogofUdPDpb8KAL1ylgrMtYMAUFyngUw4Y8IFWWfBa/B156BJ93IvzznCOO5zmob0CMO88FqXMMCqBvaG6q/UMLzvaX6BT1Oq2aqCLibg+3+ImPIvzPtL6BR1NVnMh5+SKAAAAAElFTkSuQmCC" />
+          </span>
+        </label>
       </div>
     </div>
 
     <div class="side--section">
       <div class="profile--box">
         <h2 class="profile__name">
-          김 상 웅🐣
+          김 상 웅
         </h2>
         <p class="profile__description">
-          📌 96. 12. 06 (경기 오산)
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABAUlEQVRIid2VTQ6CMBCFv5jgWVzoITyAP5gIRxKuoXgiN4rGrcGlugYXlIhkSltY6Uvehk7fm8wMU/h3eEAI7IEUeCmmQAIEKqYTVsAFKAw8A76L8ACILYSbjNVdI7qIV4xM4qse4gWQ01IuD7uam3gFhpJB2HKpDVJ8UB3WmzI3CLlgJn08a7KpMwPGjXtS3EkyeDqI102k2IerwR2YqLgRcOtioCtRM/OM78ZblyjRBE8FcZPBVjLQjelBmWSac4lrycDDbpJMTGnZsH5P8RxY6sQr9Fl2G5M4lH931CHzCMt1XcHHricpsHARrsOjXFw74MjnyTxSjuKaHk/mb+ANwTIFi/70MdsAAAAASUVORK5CYII="/>
+          96. 12. 06 (경기 오산)
         </p>
         <p class="profile__description">
-          📌 FE (JS, React) 
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABAUlEQVRIid2VTQ6CMBCFv5jgWVzoITyAP5gIRxKuoXgiN4rGrcGlugYXlIhkSltY6Uvehk7fm8wMU/h3eEAI7IEUeCmmQAIEKqYTVsAFKAw8A76L8ACILYSbjNVdI7qIV4xM4qse4gWQ01IuD7uam3gFhpJB2HKpDVJ8UB3WmzI3CLlgJn08a7KpMwPGjXtS3EkyeDqI102k2IerwR2YqLgRcOtioCtRM/OM78ZblyjRBE8FcZPBVjLQjelBmWSac4lrycDDbpJMTGnZsH5P8RxY6sQr9Fl2G5M4lH931CHzCMt1XcHHricpsHARrsOjXFw74MjnyTxSjuKaHk/mb+ANwTIFi/70MdsAAAAASUVORK5CYII="/>
+          FE (JS, React)
         </p>
         <p class="profile__description">
-          📌 BE (Node, Django) 
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABAUlEQVRIid2VTQ6CMBCFv5jgWVzoITyAP5gIRxKuoXgiN4rGrcGlugYXlIhkSltY6Uvehk7fm8wMU/h3eEAI7IEUeCmmQAIEKqYTVsAFKAw8A76L8ACILYSbjNVdI7qIV4xM4qse4gWQ01IuD7uam3gFhpJB2HKpDVJ8UB3WmzI3CLlgJn08a7KpMwPGjXtS3EkyeDqI102k2IerwR2YqLgRcOtioCtRM/OM78ZblyjRBE8FcZPBVjLQjelBmWSac4lrycDDbpJMTGnZsH5P8RxY6sQr9Fl2G5M4lH931CHzCMt1XcHHricpsHARrsOjXFw74MjnyTxSjuKaHk/mb+ANwTIFi/70MdsAAAAASUVORK5CYII="/>
+          BE (Node, Django)
         </p>
       </div>
       <nav class="nav--box">
         <ul>
-          <li> <a href="#about"> 🖇️ About Me </a> </li>
-          <li> <a href="#catching"> 🖇️ Catch up Me!</a> </li>
-          <li> <a href="#experience"> 🖇️ Experiences </a> </li>
-          <li> <a href="#skills"> 🖇️ Skills </a> </li>
-          <li> <a href="#contact"> 🖇️ Contact </a> </li>
+          <li> <a href="#about">  About Me </a> </li>
+          <li> <a href="#catching"> Catch up Me!</a> </li>
+          <li> <a href="#experience"> Experiences </a> </li>
+          <li> <a href="#skills"> Skills </a> </li>
+          <li> <a href="#contact"> Contact </a> </li>
         </ul>
       </nav>
     </div>
 
     <section class="main--section">
-      
+
       <div id="about" class="section about--me">
         <div class="about__wrapper">
           <h2 class="main--title title__about"> About Me </h2>
           <p>
-            길에서 화장실에 급하게 가고 싶을 때마다, <br/>
-            건물 화장실은 닫혀있고 공중화장실은 너무 더러워서! <br>
-            화장실 지도를 만들고 싶었던 20대 초반이 기억납니다. <br>
-            영어영문학을 전공하고, 작년까지는 장교로 복무하면서  <br>
-            저에게는 프로그래밍을 접할 기회가 적었습니다.  <br>
-            
-            20대 초반 저의 꿈을 이루고자 WECODE에 지원했습니다.<br>
+            길에서 화장실에 급하게 가고 싶을 때마다, <br />
+            스타벅스 들어가서 해결할까?.. <br>
+            건물 화장실은 잠겼을텐데 어떡하지?.. <br>
+            등 수많은 생각은 화장실MAP 제작의 불씨를 지폈습니다. <br>
+            <br>
+            영어영문학을 전공하고, 작년까지는 장교로 군복무하면서 <br>
+            저에게는 프로그래밍을 접할 기회가 적었습니다. <br>
+            <br>
+            매번 다양한 아이디어를 실현할 수 없었지만,<br>
+            WECODE의 도움을 받아 이제는 도전을 해보려고 합니다. <br>
           </p>
         </div>
-        <div class="img__wrapper">  
+        <div class="img__wrapper">
           <img src="img/sw_photo_1.jpg" alt="about-image">
         </div>
       </div>
-      
+
       <div id="catching" class="section catching">
         <h2 class="main--title title__catching"> Recently.. </h2>
       </div>
-      
+
       <div id="experience" class="section experiences">
         <h2 class="main--title title__ex"> Experience </h2>
         <div class="experiences__wrapper">
-          
+
         </div>
       </div>
-      
+
       <div id="skills" class="section skills">
         <h2 class="main--title title__skills"> Skills </h2>
         <div class="skills_wrapper">
 
         </div>
       </div>
-      
-        <div id="contact" class="section contact">
+
+      <div id="contact" class="section contact">
         <h2 class="main--title title__contact"> Contact </h2>
         <ul>
           <li> Github </li>
@@ -115,7 +122,11 @@
     </section>
 
   </div>
-
+<!--   
+  <a href="https://icons8.com/icon/100177/최대-원으로-오른쪽">최대 원으로 오른쪽 icon by Icons8</a>
+  <a href="https://icons8.com/icon/60002/태양">태양 icon by Icons8</a>
+  <a href="https://icons8.com/icon/59841/문-기호">문 기호 icon by Icons8</a>
+  <a href="https://icons8.com/icon/2969/설정">설정 icon by Icons8</a> -->
 </body>
 
 </html>
