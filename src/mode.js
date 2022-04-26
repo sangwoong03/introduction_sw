@@ -2,22 +2,66 @@ const slider = document.querySelector("#dark-mode-changer");
 const moonImg = document.querySelector(".moon-image");
 const sunImg = document.querySelector(".sun-image");
 const body = document.querySelector("body");
-const container = document.querySelector(".container");
-const navItem = document.querySelectorAll(".nav--list");
 const catchingItem = document.querySelectorAll(".catching-item");
-console.log(navItem);
+const darkContact = document.querySelector(".dark-contact-link");
+const lightContact = document.querySelector(".light-contact-link");
+const bow = document.querySelector(".bow");
+const navItem = document.querySelectorAll(".nav--list");
+const colorController = document.querySelector(".color-controller");
+const slideBtn = document.querySelectorAll(".btn-group > div > img");
+const fullBar = document.querySelectorAll(".full--bar");
+const container = document.querySelector(".container");
+const bodyStyle = body.style;
+
+function darkImgChanger() {
+	moonImg.classList.add("visible");
+	sunImg.classList.remove("visible");
+}
+function lighImgChanger() {
+	moonImg.classList.remove("visible");
+	sunImg.classList.add("visible");
+}
+function darkBody() {
+	bodyStyle.backgroundColor = "#000000";
+	bodyStyle.color = "#ffffff";
+}
+function lightBody() {
+	bodyStyle.backgroundColor = "#ffffff";
+	bodyStyle.color = "#060606";
+}
+function lightImgContact() {
+	darkContact.setAttribute("style", "display: none");
+	lightContact.removeAttribute("style", "display: none");
+}
+function darkImgContact() {
+	darkContact.removeAttribute("style", "display: none");
+	lightContact.setAttribute("style", "display: none");
+}
+function slideBtnDark() {
+	for (let i = 0; i < slideBtn.length; i++) {
+		slideBtn[i].style.backgroundColor = "#ffffff";
+		slideBtn[i].style.border = "1px solid #fffff";
+	}
+}
+function slideBtnLight() {
+	for (let i = 0; i < slideBtn.length; i++) {
+		slideBtn[i].style.backgroundColor = "#ffffff";
+		slideBtn[i].style.border = "none";
+	}
+}
+
 // Mode Change Module
 slider.onclick = (e) => {
 	const checked = e.target.checked;
-	const bodyStyle = body.style;
 
 	if (!checked) {
-		moonImg.classList.remove("visible");
-		sunImg.classList.add("visible");
-		bodyStyle.backgroundColor = "#ffffff";
-		bodyStyle.color = "#060606";
+		lighImgChanger();
+		lightBody();
+		lightImgContact();
+		slideBtnLight();
 		container.style.backgroundColor = "#ffffff";
-		colorController.style.filter = `opacity(.5) drop-shadow(0 0 0 #000)`;
+		colorController.style.filter = "opacity(.5) drop-shadow(0 0 0 #000)";
+		bow.classList.remove("gradient");
 		for (let i = 0; i < navItem.length; i++) {
 			navItem[i].style.color = "#2c2c2c";
 			if (i < 3) {
@@ -26,12 +70,13 @@ slider.onclick = (e) => {
 			}
 		}
 	} else {
-		moonImg.classList.add("visible");
-		sunImg.classList.remove("visible");
-		body.style.backgroundColor = "#000000";
-		bodyStyle.color = "#ffffff";
+		darkImgChanger();
+		darkBody();
+		darkImgContact();
+		slideBtnDark();
 		container.style.backgroundColor = "#1b1b1b";
 		colorController.style.filter = `opacity(0.9) drop-shadow(0 0 0 #fff)`;
+		bow.classList.add("gradient");
 		for (let i = 0; i < navItem.length; i++) {
 			navItem[i].style.color = "#ffffff";
 			if (i < 3) {
