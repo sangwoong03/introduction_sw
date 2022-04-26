@@ -1,15 +1,18 @@
+import createSkillBar from "./skill.js";
 const pallete = document.querySelector(".control__colors");
 const sliderBtn = document.querySelector(".slider.round");
 const sideSec = document.querySelector(".side--section");
 const title = document.querySelectorAll(".main--title");
 const navList = document.querySelectorAll(".nav--list");
-const colorController = document.querySelector(".color-controller");
 const btn = document.querySelector(".color-btn");
+const container = document.querySelector(".container");
+const skillBar = document.querySelectorAll(".skill--bar");
+const sliderInput = document.querySelector("#dark-mode-changer");
 
 // Color Change Module
 const COLOR_THEME = [
 	"#2c2c2c",
-	"#ffffff",
+	"#e2e2e2",
 	"#ff3b30",
 	"#ff9500",
 	"#ffcc00",
@@ -35,19 +38,32 @@ btn.onclick = () => {
 	}
 };
 
-document.addEventListener("click", (e) => {
+function colorChanger(e) {
 	const PAINT = "controls__color";
+	const color = e.target.style.backgroundColor;
 
-	if (e.target && e.target.className === PAINT) {
-		const color = e.target.style.backgroundColor;
+	if (e.target.className === PAINT) {
 		sideSec.style.borderRight = `1px solid ${color}`;
 		sliderBtn.style.backgroundColor = color;
 		container.style.boxShadow = `0 3px 10px ${color}, 0 1px 3px ${color}`;
-		for (let i = 0; i < navList.length; i++) {
-			navList[i].style.color = color;
-			title[i].style.color = color;
-		}
-	} else {
+		navListTitleColor(color);
+		skillBarColor(color);
+	} else if (color == "#ffffff") {
 		console.log("click the paint of pallet");
 	}
-});
+}
+
+function navListTitleColor(color) {
+	for (let i = 0; i < navList.length; i++) {
+		navList[i].style.color = color;
+		title[i].style.color = color;
+	}
+}
+
+function skillBarColor(color) {
+	for (let i = 0; i < skillBar.length; i++) {
+		skillBar[i].style.background = color;
+	}
+}
+
+document.addEventListener("click", colorChanger);
