@@ -3,7 +3,7 @@
 <br>
 <br>
 
-![Link](https://sangwoong03.github.io/introduction_sw/);
+[Link](https://sangwoong03.github.io/introduction_sw/);
 
 ### 📌 HTML, CSS란 무엇이며 필요한 이유
 
