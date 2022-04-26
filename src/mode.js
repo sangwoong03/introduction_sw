@@ -9,7 +9,6 @@ const bow = document.querySelector(".bow");
 const navItem = document.querySelectorAll(".nav--list");
 const colorController = document.querySelector(".color-controller");
 const slideBtn = document.querySelectorAll(".btn-group > div > img");
-const fullBar = document.querySelectorAll(".full--bar");
 const container = document.querySelector(".container");
 const bodyStyle = body.style;
 

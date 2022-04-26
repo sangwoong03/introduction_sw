@@ -26,14 +26,15 @@ const skills = [
 		level: "85%",
 	},
 ];
-export default function createSkillBar(item, color) {
+
+export default function createSkillBar(item) {
 	return `<div class="skill__item">
 	<div class="skill-title-wrapper">
 		<h2 class="skill--title"> ${item.title} </h2>
 		<p class="skill--level"> ${item.level} </p>
 	</div>
 	<div class="full--bar">
-		<div class="skill--bar" style="width: ${item.level}; backgroundColor: ${color}"></div>
+		<div class="skill--bar" style="width: ${item.level};"></div>
 	</div>
 </div>`;
 }

@@ -5,9 +5,8 @@ const sideSec = document.querySelector(".side--section");
 const title = document.querySelectorAll(".main--title");
 const navList = document.querySelectorAll(".nav--list");
 const btn = document.querySelector(".color-btn");
-const container = document.querySelector(".container");
+const containerDiv = document.querySelector(".container");
 const skillBar = document.querySelectorAll(".skill--bar");
-const sliderInput = document.querySelector("#dark-mode-changer");
 
 // Color Change Module
 const COLOR_THEME = [
@@ -45,13 +44,14 @@ function colorChanger(e) {
 	if (e.target.className === PAINT) {
 		sideSec.style.borderRight = `1px solid ${color}`;
 		sliderBtn.style.backgroundColor = color;
-		container.style.boxShadow = `0 3px 10px ${color}, 0 1px 3px ${color}`;
+		containerDiv.style.boxShadow = `0 3px 10px ${color}, 0 1px 3px ${color}`;
 		navListTitleColor(color);
 		skillBarColor(color);
-	} else if (color == "#ffffff") {
-		console.log("click the paint of pallet");
+	} else {
+		console.log("please click the pallet");
 	}
 }
+document.addEventListener("click", colorChanger);
 
 function navListTitleColor(color) {
 	for (let i = 0; i < navList.length; i++) {
@@ -62,8 +62,6 @@ function navListTitleColor(color) {
 
 function skillBarColor(color) {
 	for (let i = 0; i < skillBar.length; i++) {
-		skillBar[i].style.background = color;
+		skillBar[i].style.backgroundColor = color;
 	}
 }
-
-document.addEventListener("click", colorChanger);
