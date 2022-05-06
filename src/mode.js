@@ -13,12 +13,12 @@ const container = document.querySelector(".container");
 const bodyStyle = body.style;
 
 function darkImgChanger() {
-	moonImg.classList.add("visible");
-	sunImg.classList.remove("visible");
+	sunImg.classList.add("visible");
+	moonImg.classList.remove("visible");
 }
 function lighImgChanger() {
-	moonImg.classList.remove("visible");
-	sunImg.classList.add("visible");
+	sunImg.classList.remove("visible");
+	moonImg.classList.add("visible");
 }
 function darkBody() {
 	bodyStyle.backgroundColor = "#000000";

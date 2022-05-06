@@ -75,12 +75,12 @@
   align-items: center;
 }
 .mode-changer span .sun-image {
-  margin-left: 10px;
+  margin-left: 35px;
   width: 18px;
   height: 18px;
 }
 .mode-changer span .moon-image {
-  margin-left: 35px;
+  margin-left: 10px;
   width: 18px;
   height: 18px;
 }
