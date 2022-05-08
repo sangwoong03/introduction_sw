@@ -3,7 +3,8 @@
 <br>
 <br>
 
-[Link](https://sangwoong03.github.io/introduction_sw/);
+[deploy link](https://sangwoong03.github.io/introduction_sw/)  
+[velog link](https://velog.io/@sangwoong/WECODE-Project-%EA%B5%AC%ED%98%84-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C)
 
 ### 📌 HTML, CSS란 무엇이며 필요한 이유
 
@@ -94,5 +95,31 @@
 async와 defer의 차이
 
 ### 웹 페이지에서 일어날 수 있는 이벤트의 종류
+
+---
+
+**이벤트 등록 방법**
+
+- `addEventListener()`
+
+```javascript
+const button = document.querySelector("button");
+
+// first
+button.addEventListener("click", function () {
+	code;
+});
+
+// second
+function btnClick() {
+	console.log("click!");
+}
+button.addEventListener("click", btnClick); // just write name of function
+
+// third, the result is same
+button.onclick = () => {
+	console.log("click!");
+};
+```
 
 ### 이벤트와 자바스크립트 함수와의 관계
