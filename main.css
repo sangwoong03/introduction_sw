@@ -32,6 +32,8 @@
   align-items: center;
   width: 300px;
 }
+
+/* Controller -- Color Theme */
 .theme-color button {
   border: none;
   outline: none;
@@ -65,6 +67,8 @@
 .invisible {
   display: none;
 }
+
+/* Controller - Mode Changer */
 .mode-changer {
   display: flex;
   justify-content: center;
