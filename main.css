@@ -98,7 +98,9 @@
 }
 
 /* Hide default HTML checkbox */
-.changer__switch input {display:none;}
+.changer__switch input {
+  display:none;
+}
 
 /* The slider */
 .slider {
@@ -112,7 +114,7 @@
   transition: .4s;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 20px;
@@ -120,28 +122,21 @@
   left: 4px;
   bottom: 4px;
   background: #e2e2e2;
-  transition: .4s;
+  border-radius: 50%;
+  transition: .4s ease;
 }
 
 input:checked + .slider {
   background: #2196F3;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
+input:checked + .slider::before {
   transform: translateX(30px);
 }
 
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 .side--section,
