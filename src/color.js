@@ -27,13 +27,15 @@ function palletMaker(color) {
 }
 
 btn.onclick = () => {
-	const classCheck = pallete.classList.contains("visible");
+	const classCheck = pallete.classList.contains("invisible");
 
 	if (classCheck) {
-		pallete.classList.remove("visible");
+		pallete.classList.remove("invisible");
 		pallete.innerHTML = COLOR_THEME.map((item) => palletMaker(item)).join("");
+		const paint = document.querySelectorAll(".controls__color");
+		console.log(paint);
 	} else {
-		pallete.classList.add("visible");
+		pallete.classList.add("invisible");
 	}
 };
 
@@ -48,7 +50,7 @@ function colorChanger(e) {
 		navListTitleColor(color);
 		skillBarColor(color);
 	} else {
-		console.log("please click the pallet");
+		console.log("please click the paint");
 	}
 }
 document.addEventListener("click", colorChanger);

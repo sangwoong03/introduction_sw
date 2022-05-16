@@ -62,7 +62,7 @@
 .control__colors .controls__color:hover {
   transform: scale(calc(1.3));
 }
-.visible {
+.invisible {
   display: none;
 }
 .mode-changer {

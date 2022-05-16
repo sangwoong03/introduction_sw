@@ -98,28 +98,52 @@ async와 defer의 차이
 
 ---
 
-**이벤트 등록 방법**
+**이벤트의 종류**
 
-- `addEventListener()`
+- 개발자의 덕목 중 하나는 `얼마나 잘 검색하는가!`도 해당하는 것 같다.
+  우리는 브라우저에서 발생하는 모든 이벤트를 적어다니거나 외우고 다닐 수는 없다.
+  프로젝트나 회사에서 자주 사용되는 이벤트는 자연스럽게 익히게 되지만, 처음 접하는 이벤트는 검색할 필요가 있다.
+
+이벤트는 `html 요소`, `document`, 또는 `window` 이벤트로 나누어 볼 수 있을 것 같다.
+어떤 html 요소에 대한 이벤트가 실행됐을 때 → `console.log(e.target)`를 통해 DOM 객체에 대해 적용 가능한 `event`를 콘솔에서 확인할 수 있다.
+브라우저의 이벤트를 확인하는 방법으로는 → `console.log(window)` → 이후 window 객체 내의 다양한 `event`를 콘솔에서 확인할 수 있다.
+
+**이벤트 등록 방법/함수와의 관계**
+
+`addEventListener("event", callback Function () {} )`
+
+1. 첫번째 방법
+   콜백함수 자리에 함수 직접 작성하는 방법이 있다.
 
 ```javascript
 const button = document.querySelector("button");
 
-// first
 button.addEventListener("click", function () {
 	code;
 });
+```
 
+2. 두번째 방법
+   함수를 정의하여 콜백함수 자리에 함수명만 작성하는 방법이 있다.
+   하나의 DOM 객체에 여러개의 이벤트를 등록하는 것이 가능하다.
+
+```javascript
 // second
 function btnClick() {
 	console.log("click!");
 }
 button.addEventListener("click", btnClick); // just write name of function
+```
 
+3. 세번째 방법
+   인라인 핸들러 방법이 있다.
+   하나의 이벤트에 여러개의 이벤트를 등록할 경우 가장 나중에 작성된 이벤트만 적용이 된다.
+   따라서 하나의 DOM 객체에 하나의 이벤트만 등록이 가능하다.
+
+```javascript
 // third, the result is same
+// we had better not to use
 button.onclick = () => {
 	console.log("click!");
 };
 ```
-
-### 이벤트와 자바스크립트 함수와의 관계
