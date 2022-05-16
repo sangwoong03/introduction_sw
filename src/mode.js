@@ -10,6 +10,7 @@ const navItem = document.querySelectorAll(".nav--list");
 const colorController = document.querySelector(".color-controller");
 const slideBtn = document.querySelectorAll(".btn-group > div > img");
 const container = document.querySelector(".container");
+
 const bodyStyle = body.style;
 
 function darkImgChanger() {
@@ -50,9 +51,9 @@ function slideBtnLight() {
 }
 
 // Mode Change Module
-slider.onclick = (e) => {
+function changeMode(e) {
 	const checked = e.target.checked;
-
+	colorController.classList.toggle("dark-mode");
 	if (!checked) {
 		lighImgChanger();
 		lightBody();
@@ -84,4 +85,6 @@ slider.onclick = (e) => {
 			}
 		}
 	}
-};
+}
+
+slider.addEventListener("click", changeMode);
