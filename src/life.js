@@ -22,9 +22,9 @@ const experiences = [
 	{
 		id: "ex-special",
 		title: "An officer in Army",
-		content: "For 28 months, service as a officer",
+		content: "For 28 months, service as an officer",
 		description:
-			"강원도 고성군에 위치한 22사단 55보병여단 예하부대에서 소대장과 부중대장 직책으로 약 2년간 임무 수행했습니다. 일반 현역장병과는 조금 다른 방식으로 다양한 경험을 하고 생각을 할 수 있는 시간이었습니다. <br><br> Appreciate for service and duty",
+			"강원도 고성군에 위치한 22사단 55보병여단 예하부대에서 소대장과 부중대장 직책으로 약 2년간 임무 수행했습니다. 지금도 각종 근무와 작업으로 고생하는 국군 장병 여러분을 항상 응원합니다. <br><br> Appreciate for service and duty",
 		src: "img/photo_ex_sp.jpg",
 	},
 	{
@@ -32,7 +32,7 @@ const experiences = [
 		title: "From Now On",
 		content: "Work togerther! Good People!",
 		description:
-			"인생을 살아가면서 내가 어떤 사람이 되는지 고민하는 시간은 정말 중요한 것 같습니다. 죽고 사는 문제보다 중요한 것은 없다고 생각합니다. 나에게도, 다른사람에게 좋은 사람이 되려고 노력하는 하루하루를 살아가려고 합니다. <br/> This too shall pass away",
+			"인생을 살아가면서 내가 어떤 사람이 되는지 고민하는 시간은 정말 중요한 것 같습니다. 죽고 사는 문제보다 중요한 것은 없다는 말에 깊게 공감했습니다. 이 또한 지나가니 후회없이 살아보고 싶습니다. <br/><br/> This too shall pass away",
 		src: "img/photo_ex_ft.jpg",
 	},
 ];
