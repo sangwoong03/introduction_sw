@@ -1,4 +1,6 @@
-## Review basic
+## 레포지토리 개요
+
+해당 레포지토리는 `Wecode Bootcamp` 사전 스터디 간 진행 한 자기소개 페이지 개발 레포지토리입니다.
 
 <br>
 <br>
@@ -7,8 +9,6 @@
 [velog link](https://velog.io/@sangwoong/WECODE-Project-%EA%B5%AC%ED%98%84-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C)
 
 ### 📌 HTML, CSS란 무엇이며 필요한 이유
-
----
 
 `HTML (Hyper Text Markup Language)`
 
@@ -26,8 +26,6 @@
 
 ### 📌 HTML, CSS, JavaScript의 관계
 
----
-
 `JS (Javascript)`
 
 - 콘텐츠를 바꾸고 움직이는 등 동적으로 꾸며주는 역할을 하는 프로그래밍 언어
@@ -37,8 +35,6 @@
   <br>
 
 ### 📌 `.html,` `.css`, `.js`세 종류의 파일을 연결하는 방법
-
----
 
 ```html
   <head>
@@ -88,15 +84,12 @@
 
 ### 📌 script 태그의 위치에 따른 차이점
 
----
 
 태그 위치 윗부분 확인  
 브라우저가 script 파일을 읽고 실행하는 처리 과정  
 async와 defer의 차이
 
 ### 웹 페이지에서 일어날 수 있는 이벤트의 종류
-
----
 
 **이벤트의 종류**
 
